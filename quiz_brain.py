@@ -20,7 +20,7 @@ class QuizBrain:
 
         #Use JSON API to pull random questions from internet
         self.json_bank = (
-            requests.get("https://opentdb.com/api.php?amount=" + str(q_count) + "&category=18&difficulty=" + diff))
+            requests.get("https://opentdb.com/api.php?amount=" + str(q_count) + "&category=18&difficulty=" + diff + "&type=boolean"))
         if self.json_bank.status_code != 200:
             print("ERROR: Couldn't establish an internet connection to remote server. "
                   "Using default questions bank instead")
