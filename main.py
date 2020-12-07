@@ -8,9 +8,8 @@ question_bank = []
 
 # Default questions to fall back on if unable to generate random questions
 for item in question_data:
-    pass
-    #question = Question(item["text"], item["answer"], "True/False")
-    #question_bank.append(question)
+    question = Question(item["text"], item["answer"], ['True', 'False'])
+    question_bank.append(question)
 
 # Setup quiz questions
 qb = QuizBrain(question_bank)

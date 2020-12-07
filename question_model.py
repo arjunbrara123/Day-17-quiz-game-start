@@ -8,7 +8,8 @@ class Question:
         if type(choices) == 'str':
             self.choices[0] = choices
             self.choices.append(answer)
-        elif choices[0] == 'True' or choices[0] == 'False':
+            random.shuffle(self.choices)
+        if choices[0] == 'True' or choices[0] == 'False':
             self.choices = ['True', 'False']
         else:
             self.choices = choices
