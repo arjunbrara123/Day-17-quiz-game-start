@@ -9,4 +9,6 @@ for item in question_data:
     question_bank.append(question)
 
 qb = QuizBrain(question_bank)
-qb.nextQuestion()
+
+while qb.still_has_questions():
+    qb.next_question()
